@@ -18,3 +18,12 @@ def to_grayscale_fast(image_array):
     gray_rgb = np.stack([gray, gray, gray], axis=-1)
 
     return gray_rgb
+
+
+def adjust_brightness_fast(image_array, brightness_factor):
+    assert_image(image_array)
+
+    brightened_array = image_array.astype(np.int16) + brightness_factor
+    brightened_array = np.clip(brightened_array, 0, 255).astype(np.uint8)
+
+    return brightened_array

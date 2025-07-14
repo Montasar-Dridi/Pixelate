@@ -41,7 +41,7 @@ def to_grayscale_slow(image_array):
     return grayscale_array
 
 
-def adjust_brightness(image_array, brightness_factor):
+def adjust_brightness_slow(image_array, brightness_factor):
     assert_image(image_array)
 
     HEIGHT = image_array.shape[0]
@@ -53,11 +53,15 @@ def adjust_brightness(image_array, brightness_factor):
     for h in range(HEIGHT):
         for w in range(WIDTH):
             for c in range(CHANNEL):
-                brightened_channel = image_array[h, w, c] + brightness_factor
+                brightened_channel = (
+                    int(image_array[h, w, c]) + brightness_factor
+                )  # convert to int because overflow happens when 255 is exceeded
+
                 if brightened_channel > 255:
                     brightened_channel = 255
                 elif brightened_channel < 0:
                     brightened_channel = 0
+
                 brightened_array[h, w, c] = brightened_channel
 
     return brightened_array

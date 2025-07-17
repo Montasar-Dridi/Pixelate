@@ -39,7 +39,7 @@ pip install -r requirements.txt
 You can also install the package directly:
 
 ```bash
-pip install pixelate
+pip install pixelatelib
 ```
 
 The project requires Python 3.10 or newer.

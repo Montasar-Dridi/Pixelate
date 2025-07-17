@@ -1,7 +1,7 @@
 import time
 from pixelate.slow.transformations import flip_horizontal_slow
 from pixelate.fast.transformations import flip_horizontal_fast
-from pixelate.utils.image_io import load_image, save_image
+from pixelate.utils.image_io import load_image
 
 
 image = load_image("data/test_image.jpg")

@@ -13,7 +13,7 @@ def invert_color_slow(image_array):
     for h in range(HEIGHT):
         for w in range(WIDTH):
             for c in range(CHANNEL):
-                image_array[h, w, c] = 255 - image_array_copy[h, w, c]
+                image_array_copy[h, w, c] = 255 - image_array_copy[h, w, c]
 
     return image_array_copy
 

@@ -1,4 +1,5 @@
 # Pixelate
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 
 Pixelate is an educational image processing library built to compare naive loop-based algorithms with their vectorized NumPy counterparts. Each operation has a `slow` and `fast` implementation so you can explore the performance and readability differences between the two styles.
 
@@ -33,6 +34,12 @@ Clone the repository and install the requirements:
 
 ```bash
 pip install -r requirements.txt
+```
+
+You can also install the package directly:
+
+```bash
+pip install pixelate
 ```
 
 The project requires Python 3.10 or newer.
